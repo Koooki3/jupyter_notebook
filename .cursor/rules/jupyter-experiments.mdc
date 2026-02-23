@@ -1,0 +1,12 @@
+---
+description: Jupyter 实验工作区规范，实验放在 experiments/ 子文件夹中管理
+globs: experiments/**/*.ipynb
+alwaysApply: false
+---
+
+# Jupyter 实验规范
+
+- 每个实验在 `experiments/` 下使用独立子文件夹，命名建议：`编号_简短描述`（如 `01_hello_world`）。
+- 实验文件夹内可包含：`.ipynb`、`README.md`、`data/`、`output/` 等。
+- Notebook 首单元格建议为 Markdown，说明实验目的与步骤。
+- 输出与生成文件尽量放在该实验文件夹内，便于复现与版本管理。

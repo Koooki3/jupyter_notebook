@@ -1,0 +1,17 @@
+# Jupyter Notebook 实验环境依赖
+# 安装: pip install -r requirements.txt
+
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+notebook>=7.0.0
+ipykernel>=6.0.0
+
+# 常用数据分析与可视化
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# 可选：科学计算与机器学习（按需取消注释）
+# scipy>=1.10.0
+# scikit-learn>=1.3.0
