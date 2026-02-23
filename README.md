@@ -6,13 +6,17 @@
 
 ```
 jupyter_notebook/
-├── README.md           # 本说明
-├── requirements.txt    # Python 依赖
-├── experiments/        # 所有实验放在此目录下
-│   ├── 01_hello_world/ # 示例：每个实验一个子文件夹
+├── README.md              # 本说明
+├── LICENSE                # MIT 许可证
+├── requirements.txt       # Python 依赖
+├── .gitignore
+├── .cursor/
+│   └── rules/             # Cursor 实验规范（可选）
+├── experiments/           # 所有实验放在此目录下
+│   ├── 01_hello_world/    # 环境测试示例
+│   │   ├── README.md
 │   │   └── notebook.ipynb
 │   └── ...
-└── .gitignore
 ```
 
 ## 快速开始
@@ -24,6 +28,8 @@ python -m venv .venv
 .venv\Scripts\activate   # Windows
 # source .venv/bin/activate  # Linux/macOS
 ```
+
+使用 Anaconda 时可直接激活已有环境，例如：`conda activate kooki`。
 
 ### 2. 安装依赖
 
@@ -39,15 +45,31 @@ jupyter notebook
 jupyter lab
 ```
 
-### 4. 新建实验
+### 4. 运行示例实验
 
-在 `experiments/` 下新建子文件夹，例如 `02_数据分析/`，在其中创建或放置 `.ipynb` 文件即可。
+打开 `experiments/01_hello_world/notebook.ipynb`，依次运行所有单元格，可验证 Python、numpy、pandas、matplotlib 是否正常，并看到简单绘图。该示例中已配置 matplotlib 中文字体，避免中文标题/标签出现方框或 Glyph missing 警告。
+
+### 5. 新建实验
+
+在 `experiments/` 下新建子文件夹（如 `02_数据分析/`），在其中创建或放置 `.ipynb` 及需要的 `data/`、`output/` 等即可。
 
 ## 实验命名建议
 
 - 使用编号 + 简短描述：`01_hello_world`、`02_数据可视化`
-- 每个实验文件夹内可包含：`notebook.ipynb`、`data/`、`output/` 等
+- 每个实验文件夹内可包含：`notebook.ipynb`、`README.md`、`data/`、`output/` 等
+
+## 绘图中文显示说明
+
+若在 notebook 中用 matplotlib 绘制含中文的标题或标签，建议在绘图前设置中文字体，例如：
+
+```python
+import matplotlib.pyplot as plt
+plt.rcParams["font.sans-serif"] = ["Microsoft YaHei", "SimHei", "SimSun", "KaiTi"]
+plt.rcParams["axes.unicode_minus"] = False
+```
+
+示例实验 `01_hello_world` 中已包含上述配置，可直接参考。
 
 ## 许可证
 
-按需添加。
+本项目采用 [MIT License](LICENSE)。你可以在保留版权与许可声明的前提下自由使用、修改与分发。
