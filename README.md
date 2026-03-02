@@ -53,9 +53,21 @@ jupyter lab
 
 在 `experiments/` 下新建子文件夹（如 `02_数据分析/`），在其中创建或放置 `.ipynb` 及需要的 `data/`、`output/` 等即可。
 
-## 实验命名建议
+也可以直接将外部课程或项目的 Lab 拷贝到 `experiments/` 下，例如：
+
+```
+experiments/
+├── 01_hello_world/
+├── C1-Supervised ML_Regression and Classification/
+│   └── Week 1/
+│       └── C1_W1_Lab03_Model_Representation_Soln.ipynb
+└── ...
+```
+
+## 实验命名与组织建议
 
 - 使用编号 + 简短描述：`01_hello_world`、`02_数据可视化`
+- 对于课程类实验，建议以「课程名/章节」作为两级目录，便于按课程和周次管理。
 - 每个实验文件夹内可包含：`notebook.ipynb`、`README.md`、`data/`、`output/` 等
 
 ## 绘图中文显示说明
