@@ -82,6 +82,10 @@ plt.rcParams["axes.unicode_minus"] = False
 
 示例实验 `01_hello_world` 中已包含上述配置，可直接参考。
 
+## 仓库技能
+
+- `update-readme-on-task-complete`：在线程任务完成后检查并同步根目录 `README.md` 与 `requirements.txt`，确保仓库结构、实验路径、脚本入口、使用说明和依赖声明与当前实现保持一致。技能定义位于 `skills/update-readme-on-task-complete/SKILL.md`。
+
 ## 许可证
 
 本项目采用 [MIT License](LICENSE)。你可以在保留版权与许可声明的前提下自由使用、修改与分发。

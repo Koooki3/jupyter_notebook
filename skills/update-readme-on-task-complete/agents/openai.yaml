@@ -1,0 +1,4 @@
+interface:
+  display_name: "README Task Sync"
+  short_description: "Update repo README after finishing a thread task."
+  default_prompt: "Use $update-readme-on-task-complete to finish the task and refresh the repository README accordingly."
